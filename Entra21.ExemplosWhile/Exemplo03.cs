@@ -10,7 +10,9 @@ namespace Entra21.ExemplosWhile
     {
         public void Executar()
         {
-            while (indice < quantidadeDesejada)
+           int indice = 0;
+            int quantidadeDesejada = 0;
+            while (indice == quantidadeDesejada)
             {
                 Console.WriteLine("Nome: ");
                 string nome = Console.ReadLine();
