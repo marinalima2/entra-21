@@ -12,7 +12,7 @@ namespace Entra21.ExerciciosWhile
         {
             string nome = "";
 
-            while(nome == "fim")
+            while(nome != "FIM".ToLower())
             {
                 Console.Write("Digite o nome: ");
                 nome = Console.ReadLine();
