@@ -42,7 +42,12 @@ else if (opcaoDesejada == 6)
     exercicio06.Executar();
 
 }
-else if (opcaoDesejada == 11) {
+else if (opcaoDesejada == 11)
+{
     Exercicio11 exercicio11 = new Exercicio11();
     exercicio11.Executar();
+}
+else if (opcaoDesejada == 12) {
+    Exercicio12 exercicio12 = new Exercicio12();
+    exercicio12.Executar();
 }
