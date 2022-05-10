@@ -117,7 +117,8 @@ namespace Entra21.ExerciciosWhile
             Console.WriteLine("A quantidade de doces é: " + quantidadeBomba);
             Console.WriteLine(" A quantidade de sanduíches é: " + quantidadeSanduiches);
             Console.WriteLine("A quantidade de pizzas é: " + quantidadePizzas);
-
+            double mediaProdutos = valorTotal / quantidadeProdutos;
+            Console.WriteLine("A média é: " + mediaProdutos);
         }
     }
 }
