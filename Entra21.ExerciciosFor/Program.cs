@@ -32,10 +32,14 @@ else if (opcaoDesejada == 8)
     exercicio08.Executar();
 
 }
-else if (opcaoDesejada == 10) {
+else if (opcaoDesejada == 10)
+{
     Exercicio10 exercicio10 = new Exercicio10();
     exercicio10.Executar();
-
+}
+else if (opcaoDesejada == 12) {
+    Exercicio12 exercicio12 = new Exercicio12();
+    exercicio12.Executar();
 
 
 }

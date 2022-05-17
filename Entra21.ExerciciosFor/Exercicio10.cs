@@ -8,11 +8,27 @@ namespace Entra21.ExerciciosFor
 {
     internal class Exercicio10
     {
-        public void Executar() {
+        public void Executar()
+        {
+
             Console.WriteLine("Informe um número: ");
-            var numeroInformado = Convert.ToInt32(Convert.ToInt32
-        
-        
+            var numeroInformado = Convert.ToInt32(Console.ReadLine());
+
+            for (var i = 0; i <= 50; i++)
+            {
+
+                if (numeroInformado % 2 == 0)
+                {
+             
+                    
+                        Console.WriteLine(numeroInformado * i);
+                    
+                }
+                else if (numeroInformado % 2 != 0)
+                {
+                    Console.WriteLine(numeroInformado * i);
+                }
+            }
         }
     }
 }
