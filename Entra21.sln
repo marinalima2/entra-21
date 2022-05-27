@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosWhile", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosFor", "Entra21.ExerciciosFor\Entra21.ExerciciosFor.csproj", "{8AA1E490-9F75-436C-B53D-D2C8EADF6B0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosVetorWhile", "Entra21.ExerciciosVetorWhile\Entra21.ExerciciosVetorWhile.csproj", "{BB173207-2B26-4AC8-ACAA-5D858979370B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosVetorWhileFor", "Entra21.ExerciciosVetorWhile\Entra21.ExerciciosVetorWhileFor.csproj", "{BB173207-2B26-4AC8-ACAA-5D858979370B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

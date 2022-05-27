@@ -11,7 +11,7 @@ namespace Entra21.ExerciciosVetorWhile
         public void Executar()
         {
 
-            string[] nomes = new string[3];
+            string[] nomes = new string[10];
 
             int indice = 0;
 
