@@ -12,7 +12,7 @@ namespace Entra21.ExerciciosVetorWhile
         {
 
             double[] alturas = new double[4];
-            double maiorAltura = 0;
+            double menorAltura = 0;
 
 
             for (int i = 0; i <4; i++)
@@ -26,14 +26,14 @@ namespace Entra21.ExerciciosVetorWhile
             for(int i = 0; i <4; i++)
             {
 
-                if (alturas[i] > maiorAltura)
+                if (alturas[i] < menorAltura)
                 {
 
-                    maiorAltura = alturas[i];
+                    menorAltura = alturas[i];
 
                 }
             }
-        Console.WriteLine("A maior altura é: "+maiorAltura);
+        Console.WriteLine("A menor altura é: "+menorAltura);
 
         }
 
