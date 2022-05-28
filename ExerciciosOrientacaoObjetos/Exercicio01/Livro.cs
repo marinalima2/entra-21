@@ -40,11 +40,13 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
 
         public int ObterQuantidadeAnosAposPublicacao()
         {
-            var anosAposPublicacao = DataLancamento - DateTime.Now;
+            var anosAposPublicacao = DataLancamento.Year - DateTime.Now.Year;
             return anosAposPublicacao;
-
-
         }
+
+
+
+
 
 
     }

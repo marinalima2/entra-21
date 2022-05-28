@@ -29,6 +29,9 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
            livro.Releitura = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Título e autor: " + livro.ObterTituloAutor());
+            Console.WriteLine("Quantidade de páginas para ler: "+ livro.ObterPaginasLidas);
+            Console.WriteLine("Quantidade de páginas lidas no total: "+ livro.ObterPaginasLidas);
+            Console.WriteLine("Quantidade de anos após a publicação: "+ livro.ObterQuantidadeAnosAposPublicacao);
 
 
         }
