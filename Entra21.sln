@@ -7,10 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWhile", "En
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosWhile", "Entra21.ExerciciosWhile\Entra21.ExerciciosWhile.csproj", "{C78867F4-EDE5-44D0-B4E8-72ECCD6184FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosFOR", "ExerciciosFOR\Entra21.ExerciciosFOR.csproj", "{CA2825AE-2FD8-4984-AFF4-9218098930F6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciciosForTryCatch", "ExerciciosForTryCatch\ExerciciosForTryCatch.csproj", "{E18A1F8A-96BD-40D8-9E24-7F0C67234934}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{C78867F4-EDE5-44D0-B4E8-72ECCD6184FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C78867F4-EDE5-44D0-B4E8-72ECCD6184FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C78867F4-EDE5-44D0-B4E8-72ECCD6184FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA2825AE-2FD8-4984-AFF4-9218098930F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA2825AE-2FD8-4984-AFF4-9218098930F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA2825AE-2FD8-4984-AFF4-9218098930F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA2825AE-2FD8-4984-AFF4-9218098930F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E18A1F8A-96BD-40D8-9E24-7F0C67234934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E18A1F8A-96BD-40D8-9E24-7F0C67234934}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E18A1F8A-96BD-40D8-9E24-7F0C67234934}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E18A1F8A-96BD-40D8-9E24-7F0C67234934}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

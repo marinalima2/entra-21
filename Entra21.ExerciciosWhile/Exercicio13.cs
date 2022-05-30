@@ -24,8 +24,17 @@ namespace Entra21.ExerciciosWhile
             string sexo = Console.ReadLine();
 
 
+            Console.WriteLine("Altura: ");
+            double altura = Convert.ToDouble(Console.ReadLine());
 
+            Console.WriteLine("Quantidade de gols marcados: ");
+            int gols = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine("Quantidade de cartões amarelos recebidos: ");
+            int cartaoAmarelo = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Quantidade de cartões vermelhos recebidos: ");
+            int cartaoVermelho = Convert.ToInt32(Console.ReadLine());
 
         }
     }
