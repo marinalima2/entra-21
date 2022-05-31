@@ -1,5 +1,6 @@
 ﻿using Entra21.ExerciciosOrientacaoObjetos;
 using Entra21.ExerciciosOrientacaoObjetos.Exercicio01;
+using Entra21.ExerciciosOrientacaoObjetos.Exercicio02;
 
 Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine(@"
@@ -14,12 +15,20 @@ Console.WriteLine(@"
 ");
 
 Console.WriteLine("Informe uma opçaõ: ");
-int opcaoDesejada = 1;
+int opcaoDesejada = Convert.ToInt32(Console.ReadLine());
+
+Console.Clear();
 
 if (opcaoDesejada == 1)
 {
     ExercicioLivro exercicioLivro = new ExercicioLivro();
     exercicioLivro.Executar();
 
+
+}
+if(opcaoDesejada == 2)
+{
+    ExercicioTemperatura exercicioTemperatura = new ExercicioTemperatura();
+    exercicioTemperatura.Executar();
 
 }
