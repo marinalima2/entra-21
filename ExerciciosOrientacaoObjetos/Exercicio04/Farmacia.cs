@@ -31,7 +31,7 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
         
         }
 
-        public double ApresentarTotalDoPedidoPorCategoria() { 
+        //public double ApresentarTotalDoPedidoPorCategoria() { 
         
         
 
@@ -40,7 +40,7 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
 
 
         
-        }
+        //}
 
 
 
