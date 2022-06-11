@@ -41,7 +41,6 @@
             }
         }
 
-
         private void ApresentarProduto()
         {
             ApresentarProduto();
@@ -63,6 +62,7 @@
                 "\nnome: " + produto.Nome + "\n" + "Preço unitário: " + produto.PrecoUnitario + "\n" +
                "Quantidade: " + produto.Quantidade + "\n " + "Total: " + produto.CalcularPrecoTotal());
         }
+
         private void Apagar()
         {
             ApresentarProdutos();
@@ -113,6 +113,7 @@
                 Console.WriteLine("Produto alterado com sucesso");
             }
         }
+
         public int ApresentarSolicitarMenu()
         {
             Console.WriteLine(@"  MENU
@@ -127,10 +128,11 @@
             return codigo;
 
         }
+
         private int SolicitarCodigo()
         {
             int codigo = 0;
-            //Continua solicitando o código até q   ue seja um código entre 1 e 6
+            //Continua solicitando o código até que seja um código entre 1 e 6
             while (codigo < 1 || codigo > 6)
             {
                 try
@@ -145,6 +147,7 @@
             }
             return codigo;
         }
+
         private void Cadastrar()
         {
             Console.WriteLine("Nome: ");
@@ -166,6 +169,7 @@
             var localizacaoProduto = ObterLocalizacaoProduto(localizacao);
             produtoServico.Adicionar(nome, precoUnitario, localizacaoProduto, quantidade);
         }
+
         private ProdutoLocalizacao ObterLocalizacaoProduto(string localizacao)
         {
             if (localizacao.ToLower() == "armazem")

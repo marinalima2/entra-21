@@ -27,11 +27,11 @@
 
             //Adicionar o produto instanciado na lista de produtos
             produtos.Add(produto);
+
         }
 
         public bool Editar(int codigoParaAlterar, string nome, double precoUnitario, ProdutoLocalizacao localizacao, int quantidade)
         {
-
             Produto produtoParaAlterar = ObterPorCodigo(codigoParaAlterar);
 
             if (produtoParaAlterar == null)
@@ -96,6 +96,102 @@
                 //Retorna null, caso não encontre um produto com o código passado como parametro 
             }
             return null;
+        }
+
+        public Produto ObterMenorPrecoUnitario()
+        {
+            double menorPrecoUnitario = double.MaxValue;
+            Produto produtoMenorPrecoUnitario = null;
+            for(int i = 0;i < produtos.Count; i++)
+            {
+                Produto produto = produtos[i];
+                if (produto.PrecoUnitario < menorPrecoUnitario)
+                {
+                    menorPrecoUnitario = produto.PrecoUnitario;
+                    produtoMenorPrecoUnitario = produto;
+
+                }
+            }
+            return produtoMenorPrecoUnitario; 
+
+        }
+
+        public List <double> ObterTodosPrecos()
+        {
+            //Criar uma lista de preços totais
+            var precos = new List<double>();
+
+            //Percorre todos os produtos
+            for(int i = 0; i < produtos.Count; i++)
+            {
+                //Obtém o produto atual da lista de produtos
+                var produto = produtos[i];
+
+                //Adiciona o preço total na lista de preços
+                precos.Add(produto.CalcularPrecoTotal());
+            }   
+            return precos;
+        }
+        
+        public List<double>ObterPrecosTotaisFiltrandoPorLocalizacao(ProdutoLocalizacao localizacao)
+        {
+            //Criar uma lista de preços totais
+            var precos = new List <double>();
+
+            //Percorre todos os produtos
+            for(var i = 0; i < produtos.Count; i++)
+            {
+                //Obtém o produto atual da lista de produtos
+                var produto = produtos[i];
+
+                //Verifica se a localização do produto atual é a localização passada no parametro
+               if (produto.Localizacao == localizacao)
+                {
+                    // Adiciona o preço total do produto atual que foi filtrado por localização
+                    precos.Add(produto.CalcularPrecoTotal());
+                }
+            }
+
+            return precos;
+        }
+
+        public List<double> ObterPrecosTotaisDoArmazem()
+        {
+            //Criar uma lista de preços totais 
+            var precos = new List<double>();
+
+            //Percorre todos os produtos 
+            for (int i =0; i < produtos.Count; i++)
+            {
+                //Obtém o produto atual na lista de produtos
+                var produto = produtos[i];
+
+                //Verifica se a localização do produto atual é armazem
+                if(produto.Localizacao == ProdutoLocalizacao.Armazem)
+                {
+                    //Adiciona o preço total do produto atual que foi filtrado por armazem 
+                    precos.Add(produto.CalcularPrecoTotal());
+                }
+            }
+             return precos;
+        }
+
+        public double ObterMediaPrecosTotais()
+        {
+            var somaPrecosTotais = 0.0;
+
+            //Percorre todos os produtos 
+            for(int i = 0; i < produtos.Count; i++)
+            {
+                //Obtém o produto atual da lista de produtos 
+                var produto = produtos[i];
+            
+                //Adiciona o preço total do produto na variavel soma de preços totais
+            somaPrecosTotais += produto.CalcularPrecoTotal();
+            }
+            var media = somaPrecosTotais/produtos.Count;
+            return media;
+
         }
     }
 }
