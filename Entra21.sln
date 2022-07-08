@@ -23,6 +23,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExercicioListaObjet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosWindowsForm1", "Entra21.ExemplosWindowsForm1\Entra21.ExemplosWindowsForm1.csproj", "{02E83A83-06C0-4CB7-AFE1-4FA30711F8B8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4ED0D426-9459-4E2D-8F7A-DFF3D905DF5D}"
+	ProjectSection(SolutionItems) = preProject
+		ExerciciosBanco\Atividade01.sql = ExerciciosBanco\Atividade01.sql
+		ExerciciosBanco\Atividade02.sql = ExerciciosBanco\Atividade02.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
