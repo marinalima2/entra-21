@@ -62,4 +62,12 @@ INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, compleme
 VALUES('AC', '', 'Preventório', '', 
 'Beco da Ligação II', '249', '');
 
+
+UPDATE enderecos SET estado = 'PB' , cidade = 'Cabedelo', 
+bairro = 'Camalaú' , cep ='58.103-052' , logradouro= ' Rua Siqueira Campos', numero = '249', 
+complemento = '' WHERE id = 11;
+
 SELECT estado, cidade, bairro, cep, logradouro, numero, complemento FROM enderecos;
+
+
+
