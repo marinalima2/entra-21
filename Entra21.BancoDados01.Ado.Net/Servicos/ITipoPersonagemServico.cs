@@ -13,6 +13,8 @@ namespace Entra21.BancoDados01.Ado.Net.Servicos
 
         void Cadastrar(Models.TipoPersonagem tipoPersonagem);
 
+        List<TipoPersonagem>
+
 
 
     }

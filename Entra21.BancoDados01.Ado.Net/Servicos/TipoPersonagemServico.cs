@@ -1,4 +1,7 @@
-﻿using System.Data.SqlClient;
+﻿using Entra21.BancoDados01.Ado.Net.DataBase;
+using Entra21.BancoDados01.Ado.Net.Models;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Entra21.BancoDados01.Ado.Net.Servicos
 {
@@ -13,6 +16,8 @@ namespace Entra21.BancoDados01.Ado.Net.Servicos
         public void Cadastrar(Models.TipoPersonagem tipoPersonagem)
         {
             //Será descrito a implementação do contrato definido na interface
+
+            var conexao = new Conexao().Conectar();
 
 
             //Instanciando um objeto da classe SqlConnection,
@@ -46,9 +51,39 @@ namespace Entra21.BancoDados01.Ado.Net.Servicos
 
             conexao.Close();
 
+        }
+
+        public List<TipoPersonagem> ObterTodos()
+        {
+            var conexao = new Conexao().Conectar();
+
+            var comando = conexao.CreateCommand();
+
+            comando.CommandText = 'SELECT id, tipo FROM tipos_personagens';
+
+            var tabelaEmMemoria = new DataTable();
+
+            tabelaEmMemoria.Load(comando.ExecuteReader());
+
+            var tiposPersonagens = new List<TipoPersonagem>();
+
+            for (int i = 0; i < tabelaEmMemoria.Rows.Count; i++)
+            {
+
+                var linha = tabelaEmMemoria.Rows[1];
 
 
+                var tipoPersonagens = new TipoPersonagem();
+                TipoPersonagem.id = Convert.ToInt32(linha["id"].ToString());
 
+                tipoPersonagem.Tipo = linha["tipo"].ToString();
+
+                tiposPersonagens.add(tipoPersonagem);
+            }
+
+            comando.Connection.Close();
+
+            return tiposPersonagens;
         }
 
 
