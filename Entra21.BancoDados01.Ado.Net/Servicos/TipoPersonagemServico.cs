@@ -12,29 +12,31 @@ namespace Entra21.BancoDados01.Ado.Net.Servicos
 
     internal class TipoPersonagemServico : ITipoPersonagemServico
     {
+        public void Apagar(int id)
+        {
+            //Conectar com o BD
+            var conexao = new Conexao().Conectar();
+
+            //Criar comando para executar o delete
+            var comando = conexao.CreateCommand();
+
+
+            //Definindo o comando para apagar o registro
+            comando.CommandText = "DELETE FROM tipos_personagens WHERE id = " + id;
+
+            //executando o comando para apagar os registros 
+            comando.ExecuteNonQuery();
+
+            //Fechar conexão com o BD
+            comando.Connection.Close();
+
+        }
 
         public void Cadastrar(Models.TipoPersonagem tipoPersonagem)
         {
             //Será descrito a implementação do contrato definido na interface
 
             var conexao = new Conexao().Conectar();
-
-
-            //Instanciando um objeto da classe SqlConnection,
-            // que permite fazer selects, inserts, updates, deletes, etc
-            SqlConnection conexao = new SqlConnection();
-
-            //String quw contém o caminho para o banco de dados 
-            //o que permitirá conectar ao banco de dados 
-            var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\\Server\c#-noturno\marina.lima\Desktop\ExemploBancoDados01AdoNet.mdf;Integrated Security=True;Connect Timeout=30";
-
-
-            //Definir o caminho da conexão para o sqlConnection
-            conexao.ConnectionString = connectionString;
-
-            //Abrir conexao para o banco de dados 
-            conexao.Open();
-
 
             //Criar o comando para executar no banco de dados 
 
@@ -59,7 +61,7 @@ namespace Entra21.BancoDados01.Ado.Net.Servicos
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = 'SELECT id, tipo FROM tipos_personagens';
+            comando.CommandText = "SELECT id, tipo FROM tipos_personagens";
 
             var tabelaEmMemoria = new DataTable();
 
@@ -70,15 +72,15 @@ namespace Entra21.BancoDados01.Ado.Net.Servicos
             for (int i = 0; i < tabelaEmMemoria.Rows.Count; i++)
             {
 
-                var linha = tabelaEmMemoria.Rows[1];
+                var linha = tabelaEmMemoria.Rows[i];
 
 
-                var tipoPersonagens = new TipoPersonagem();
-                TipoPersonagem.id = Convert.ToInt32(linha["id"].ToString());
+                var tipoPersonagem = new TipoPersonagem();
+                tipoPersonagem.Id = Convert.ToInt32(linha["id"].ToString());
 
                 tipoPersonagem.Tipo = linha["tipo"].ToString();
 
-                tiposPersonagens.add(tipoPersonagem);
+                tiposPersonagens.Add(tipoPersonagem);
             }
 
             comando.Connection.Close();

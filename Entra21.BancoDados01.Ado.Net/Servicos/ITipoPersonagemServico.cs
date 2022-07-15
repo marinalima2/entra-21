@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entra21.BancoDados01.Ado.Net.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,10 @@ namespace Entra21.BancoDados01.Ado.Net.Servicos
 
         void Cadastrar(Models.TipoPersonagem tipoPersonagem);
 
-        List<TipoPersonagem>
+        List<TipoPersonagem> ObterTodos();
+
+        void Apagar(int id);
+
 
 
 
