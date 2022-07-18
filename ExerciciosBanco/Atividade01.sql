@@ -1,4 +1,4 @@
-﻿
+﻿ç
 DROP TABLE pessoas;
 
 CREATE TABLE pessoas (
