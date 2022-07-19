@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entra21.BancoDados01.Ado.Net.Models
+namespace Entra21.BancoDados01.Ado.Net.Exercicio.servicos
 {
-    internal class Editora
+    internal class cidadesService
     {
+
+       
     }
 }
