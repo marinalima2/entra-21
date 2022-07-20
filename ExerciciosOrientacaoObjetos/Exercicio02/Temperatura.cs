@@ -1,4 +1,10 @@
-﻿namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
 {
     public class Temperatura
     {
@@ -6,30 +12,30 @@
         public int temperaturaDestino;
         public int valorTemperatura;
 
+        public string TemperaturaOrigem;
+        public string TemperaturaDestino;
+        public double ValorTemperatura;
 
-        public int CalcularCelsiusParaKelvin()
         {
             var temperaturaCelsiusParaKelvin = temperaturaOrigem + 273;
             return temperaturaCelsiusParaKelvin;
 
-        }
-
-        public int CalcularCelsiusParaFahrenheit()
-        {
-
-            var temperaturaCelsiusParaFahrenheit = ((temperaturaOrigem * 9) / 5) + 32;
-            return temperaturaCelsiusParaFahrenheit;
+            var temperaturaCelsiusKelvin = ValorTemperatura + 273;
+            return temperaturaCelsiusKelvin;
 
         }
 
-        public int CalcularKelvinParaCelsius()
         {
-            var temperaturaKelvinParaCelsius = temperaturaOrigem - 273;
-            return temperaturaKelvinParaCelsius;
+
+        }
+
+        {
         }
 
         public double CalcularKelvinParaFahrenheit()
         {
+            var kelvinParaFahrenheit = (ValorTemperatura - 273) * 1.8 + 32;
+            return kelvinParaFahrenheit;
 
             var temperaturaKelvinParaFahrenheit = ((temperaturaOrigem - 273) * 1.8) + 32;
             return temperaturaKelvinParaFahrenheit;
@@ -39,19 +45,55 @@
         public double CalcularFahrenheitParaCelsius()
         {
 
-            var temperaturaFahrenheitParaCelsius = ((temperaturaOrigem - 32) * 5 / 9);
-            return temperaturaFahrenheitParaCelsius;
-
         }
 
         public double CalcularFahrenheitParaKelvin()
         {
-            var temperaturaFahrenheitParaKelvin = (((temperaturaOrigem - 32) / 1.8) + 273) * 15;
-            return temperaturaFahrenheitParaKelvin;
 
         }
 
-      
+
+
+
+        public double ObterTemperaturaConvertida()
+        {
+            if (TemperaturaOrigem == "celsius" && TemperaturaDestino == "kelvin")
+            {
+                return CalcularCelsiusParaKelvin();
+
+            }
+            else if (TemperaturaOrigem == "celsius" && TemperaturaDestino == "farenheit")
+            {
+                return CalcularCelsiusParaFahrenheit();
+
+            }
+            else if (TemperaturaOrigem == "kelvin" && TemperaturaDestino == "celsius")
+            {
+                return CalcularKelvinParaCelsius();
+
+            }
+            else if (TemperaturaOrigem == "kelvin" && TemperaturaDestino == "fahrenheit")
+            {
+
+                return CalcularKelvinParaFahrenheit();
+
+            }
+            else if (TemperaturaOrigem == "fahrenheit" && TemperaturaDestino == "celsius")
+            {
+                return CalcularFahrenheitParaCelsius();
+
+
+            }
+            else if (TemperaturaOrigem == "fahrenheit" && TemperaturaDestino == "kelvin")
+            {
+
+                return CalcularFahrenheitParaKelvin();
+            }
+
+            return 0;
+
+        }
+
 
     }
 }

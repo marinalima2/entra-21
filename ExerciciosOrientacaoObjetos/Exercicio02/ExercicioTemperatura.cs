@@ -8,9 +8,11 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
 {
     public class ExercicioTemperatura
     {
+        public int ValorTemperatura;
 
         public void Executar()
         {
+
             Temperatura temperatura = new Temperatura();
 
             Console.WriteLine("Informe a temperatura de origem: ");
@@ -20,14 +22,19 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
 
 
 
+            Console.WriteLine("Informe a temperatura de destino: ");
+            temperatura.TemperaturaDestino = Console.ReadLine();
 
+            Console.WriteLine("Valor da temperatura: ");
+            temperatura.ValorTemperatura = Convert.ToDouble(Console.ReadLine());
 
+            Console.WriteLine(temperatura.ObterTemperaturaConvertida());
 
 
 
 
         }
-        
+
 
 
 
